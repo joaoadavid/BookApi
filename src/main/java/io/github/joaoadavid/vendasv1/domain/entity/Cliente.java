@@ -1,7 +1,17 @@
 package io.github.joaoadavid.vendasv1.domain.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "cliente")
 public class Cliente {
+
+    @Id//significa que é um id
+    @GeneratedValue(strategy = GenerationType.AUTO)//estratégia para gerar id automatico
+    @Column(name = "id")//mostra que é uma coluna e mapeia para o banco
     private Integer id;
+
+    @Column(name = "nome", length = 100)//define o número de caracteres para a coluna
     private String nome;
 
     public Cliente() {
