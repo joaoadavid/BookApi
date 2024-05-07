@@ -38,11 +38,4 @@ public class SecurityConfig {
                 .httpBasic(withDefaults());
         return http.build();
     }
-
-    @Bean
-    public UsuarioServiceImpl usuarioService(){
-        return new UsuarioServiceImpl();
-    }
-
-
 }
