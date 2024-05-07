@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 
-public interface Clientes extends JpaRepository <Cliente, Integer> {//recebe dois tipos de parametros, tipo e id
+public interface ClientesRepository extends JpaRepository <Cliente, Integer> {//recebe dois tipos de parametros, tipo e id
    @Query(value = "select * from Cliente c Where c.nome like '%:nome%' ", nativeQuery = true)
     List<Cliente> encontrarPorNome(@Param("nome") String nome);
 
